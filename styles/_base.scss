@@ -1,0 +1,27 @@
+//colores del modo noche
+:root {
+    --bg-header: #313338;
+    --bg-principal: #0f0f0f;
+    --text-principal: #ffffff;
+    --bg-bot-txt: #1f1f1f;
+    --bg-user-txt: #122a36;
+    --border-bot: #3f99ff;
+    --border-user: #ff3fdf;
+    --bg-chat-input: #171717;
+    --scrollbar: #000;
+    --scrollbar-thumb: #c92ff8;
+}
+
+//colores del modo dia
+.light-mode{
+    --bg-header: #c6cee2;
+    --bg-principal: #ffffff;
+    --text-principal: #000000;
+    --bg-bot-txt: #e0e0e0;
+    --bg-user-txt: #c0c0c0;
+    --border-bot: #0055aa;
+    --border-user: #aa0055;
+    --bg-chat-input: #dddddd;
+    --scrollbar: #868686;
+    --scrollbar-thumb: #27e6ff;
+}

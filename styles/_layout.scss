@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-principal);
+}
+
+header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-header);
+    justify-content: space-between;
+    color: var(--text-principal);
+    
+    h1 {
+        font-size: clamp(1.5rem, 1.054rem + 1.19vw, 2.125rem);
+    }
+
+    button{
+        width: 45px;
+        padding: 7px;
+        border-radius: 8px;
+        background-color: #3fd2ff;
+        border: none;
+        transition: all .3s ease;
+
+        &:hover{
+            transform: scale(1.01);
+        }
+
+        &:active{
+            background-color: #981beb;
+            transform: scale(.9);
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+}
+
+.chat{
+    width: 85%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-principal);
+
+    @media screen and (max-width: 500px){
+        width: 95%;
+    }
+}
+
+.chat-header{
+    width: 85%;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-principal);
+    color: var(--text-principal); 
+
+    & > div:first-child { 
+        display: flex;
+        gap: 7px;
+
+        h2{
+            font-size: clamp(1.063rem, 0.75rem + 0.833vw, 1.5rem);
+        }
+
+        img{
+            width: 40px;
+            border-radius: 8px;
+        }
+    }
+
+    & > div:last-child button{
+        width: 50px;
+        padding: 7px;
+        border-radius: 8px;
+        background-color: #3fd2ff;
+        border: none;
+        transition: all .3s ease;
+
+        &:hover{
+            transform: scale(1.01);
+        }
+
+        &:active{
+            background-color: #981beb;
+            transform: scale(.9);
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        width: 100%;
+    }
+}
+
+.chat-container{
+    width: 85%;
+    padding: 15px;
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--bg-principal);
+
+    .bot-txt {
+        align-self: flex-start;
+        background-color: var(--bg-bot-txt);
+        width: 45%;
+        padding: 8px;
+        border: 2px solid var(--border-bot);
+        border-radius: 0px 10px 10px 10px;
+
+        & > p {
+            color: var(--text-principal);
+        }
+    }
+
+    .user-txt {
+        align-self: flex-end;
+        background-color: var(--bg-user-txt);
+        padding: 8px;
+        width: 45%;
+        border: 2px solid var(--border-user);
+        border-radius: 10px 0px 10px 10px;
+
+        & > p {
+            color: var(--text-principal);
+        }
+    }
+
+    &::-webkit-scrollbar{
+        width: 7px;
+        background-color: var(--scrollbar);
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb);
+        border-radius: 5px;
+    }
+
+    @media screen and (max-width: 500px){
+        width: 100%;
+    }
+
+    @media screen and (max-width: 555px){
+        gap: 20px;
+
+        .bot-txt, .user-txt{
+            width: 70%;
+        }
+    }
+}
+
+.chat-input{
+    width: 85%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: var(--bg-principal);
+
+    div {
+        display: flex;
+        background-color: var(--bg-chat-input);
+        padding: 10px;
+        border-radius: 8px;
+        border: 2px solid #00000000;
+        transition: all .3s ease;
+
+        input{
+            width: 100%;
+            background-color: #00000000;
+            color: var(--text-principal);
+            outline: none;
+            border: unset;
+        }
+
+        button{
+            cursor: pointer;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            background-color: #18ea61;
+            border: none;
+            transition: all .3s ease;
+            position: relative;
+
+            &:active{
+                background-color: aqua;
+            }
+
+            img {
+                position: absolute;
+                top: 6px;
+                right: 6px;
+            }
+        }
+
+        &:focus-within{
+            border: 2px solid #67d5ff;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        width: 100%;
+    }
+}
