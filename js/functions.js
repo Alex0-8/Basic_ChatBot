@@ -81,10 +81,7 @@ inputField.addEventListener('keyup', (e) => {
 const resetBtn = document.getElementById('reset-chat');
 
 resetBtn.addEventListener('click', () => {
-    chatContainer.innerHTML = `
-        <div class="bot-txt">
-            <p>texto de prueba</p>
-        </div>`
+    chatContainer.innerHTML = ``
 })
 
 
